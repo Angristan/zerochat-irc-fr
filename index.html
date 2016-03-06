@@ -15,7 +15,7 @@ ul { padding: 0px; }
 li { list-style-type: none; border-top: 1px solid #eee; padding: 5px 0px; padding-left: 130px; }
 li b { color: #3F51B5; }
 small { color: #999; width: 130px; display: inline-block; text-align: right; margin-left: -136px; }
-
+h1 { color:blue; font-size: 200%;}
 #rhs { width:200px; border: 2px solid grey; float:right; display:none; }
 
 .darktheme { background-color: rgb(64,64,64); color: rgb(200,200,200); }
@@ -30,26 +30,34 @@ small { color: #999; width: 130px; display: inline-block; text-align: right; mar
 <body onload="init()">
 
 <div id="header">
-<h1 id="bigTitle"></h1>
-<h2 id="title">ZeroChat "IRC" v0.55</h2>
+<div align="center"><b> | <a href="http://127.0.0.1:43110/1Vp5LH4wegCaqeB72yMw2jgNdVm4aR7ET" target=_blank>ZeroTalk FR - Le forum francophone</a> | <a href="http://127.0.0.1:43110/1KzDGFWuVgniDVaKBdS1cY91FZBQeKbZMn" target=_blank>ZeroChat FR - Le tchat francophone </a> | </b></div>
+<hr>
+<table style="width:100%">
+  <tr>
+    <td align="center"><img src="oif10.png" alt="Drapeau francophone" style="width:100px;height:100px;"></td>
+    <td><h1 id="title">ZeroChat FR: IRC ZeroNet pour les francophones</h1>
+<i>Salon de discussion lancé par <a href="http://127.0.0.1:43110/Mail.ZeroNetwork.bit/?to=nowhereman">nowhereman</a> et <a href="http://127.0.0.1:43110/Mail.ZeroNetwork.bit/?to=angristan">angristan</a>.
+<br><a href="https://github.com/Angristan/zerochat-irc-fr">ZeroChat FR</a> est un fork de <a href="https://github.com/cgm616/zerochat-irc">ZeroChatIRC</a>.<br><br>
+</i></td>
+  </tr>
+</table>
+<hr>
+</ul>
+<span id="topic"><b>Features:</b> URL et adresses mail cliquables, vos messages sont en gras et vos mentions sont surlignées, thème sombre/clair, bloquage des messages vides</span><br><br/>
+<span>Taper <b>/me <action></b> pour des actions dans le style IRC</span><br>
+<span>Taper <b>@username <ton message></b> pour mentionner une autre personne</span><br>
 
-<h2>PUBLIC SERVICE ANNOUNCEMENT: NEED SOMEONE TO CONTINUE WORK ON THIS PROJECT, READ THIS: <a href="http://127.0.0.1:43110/1CjR14fofbRJ54oj8A7rAfWpzpLawdP5uc/README.txt">README.txt</a></h2>
-<b>Send new feature requests, content signing errors and report bugs to: <a href="http://127.0.0.1:43110/Mail.ZeroNetwork.bit/?to=cgm616">cgm616@zeroid.bit</a> or <a href="http://127.0.0.1:43110/Mail.ZeroNetwork.bit/?to=thoth">thoth@zeroid.bit</a> or <a href="http://127.0.0.1:43110/Mail.ZeroNetwork.bit/?to=hhes">hhes@zeroid.bit</a> | <a href="https://github.com/cgm616/zerochat-irc/">ZeroChat Github</a></b>
-
-<br><br>
-<span>Try typing: <b>/me action</b> for irc styled actions, more coming later</span><br>
-<span>Try typing: <b>@username typeyourmessage</b> to highlight your message for that user</span><br>
 <span style="display:none;">Type: <b>/r typeyourmessage</b> to reply to the last person to mention @you</span>
 </div>
 <br>
 
-<input type="button" onclick="$('#header').toggle();" value="hide/show">
-<input type="button" onclick="swapTheme()" value="swaptheme"><br>
+<input type="button" onclick="$('#header').toggle();" value="cacher/montrer">
+<input type="button" onclick="swapTheme()" value="Changer le thème"><br>
 
 <br>
 <div id="inputField">
   <a href="#Select+user" id="select_user" onclick='return Page.selectUser()'>Select user</a>:
-  <input type="text" id="message" onkeypress="if (event.keyCode == 13) Page.sendMessage()"><input type="button" id="send" value="Send!" onclick="return Page.sendMessage()"/> <span id="peerCount">0 Visitors</span>
+  <input type="text" id="message" onkeypress="if (event.keyCode == 13) Page.sendMessage()"><input type="button" id="send" value="Envoyer" onclick="return Page.sendMessage()"/> <!-- <span id="peerCount">0 Pairs</span>-->
 </div>
 
 <div id="logContainer">
