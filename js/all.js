@@ -397,7 +397,7 @@
       this.cmd("siteInfo", {}, (function(_this) {
         return function(site_info) {
           document.getElementById("bigTitle").innerHTML = site_info.content.title + ' - ' + site_info.content.description;
-          document.getElementById("peerCount").innerHTML = site_info.peers + ' Visitors';
+          document.getElementById("peerCount").innerHTML = site_info.peers + ' Peers';
 
           if (site_info.cert_user_id) {
             document.getElementById("select_user").innerHTML = site_info.cert_user_id;
