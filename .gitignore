@@ -1,0 +1,9 @@
+# Hidden files
+.*
+!/.gitignore
+
+# Data dir
+data/*
+
+# ZeroNet content list
+content.json
